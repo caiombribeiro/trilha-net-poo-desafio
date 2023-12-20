@@ -5,20 +5,23 @@ namespace DesafioPOO.Models
         public string Numero { get; set; }
         private string _modelo; 
         public string Modelo
-        { 
+        {   
+            get => _modelo;
             set => _modelo = value;    
         }
 
         private string _imei;
 
         public string Imei
-        { 
+        {   
+            get => _imei;
             set => _imei = value;    
         }
 
         private int _memoria;
         public int Memoria
         { 
+            get => _memoria;
             set => _memoria = value;    
         }
 
@@ -31,6 +34,12 @@ namespace DesafioPOO.Models
         
         }
 
+        public void especificacoes()
+        {
+            Console.WriteLine("----------------------------Especificações Técnicas---------------------------");
+            Console.WriteLine($"Número: {Numero} | Modelo: {Modelo} | IMEI: {Imei} | Memória geral: {Memoria}");
+            Console.WriteLine("------------------------------------------------------------------------------");
+        }
         public void Ligar()
         {
             Console.WriteLine("Ligando...");
@@ -43,7 +52,7 @@ namespace DesafioPOO.Models
 
         public virtual void InstalarAplicativo(string nomeApp)
         {
-            
+
         }
     }
 }
